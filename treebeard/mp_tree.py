@@ -556,7 +556,10 @@ class MP_Node(Node):
 
     steplen = 4
     alphabet = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ'
-    node_order_by = []
+    node_order_by = [
+        'path',
+        'node'
+    ]
     path = models.CharField(max_length=255, unique=True)
     depth = models.PositiveIntegerField()
     numchild = models.PositiveIntegerField(default=0)
